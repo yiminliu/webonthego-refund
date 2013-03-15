@@ -19,6 +19,7 @@
         <entry key="canUpdate" value-ref="updatePermission" />
         <entry key="isOwner" value-ref="ownerPermission" />
         <entry key="isInternalUser" value-ref="internalUserPermission" />
+        <entry key="canRefund" value-ref="refundPermission" />
       </map>
     </constructor-arg>
   </bean>
@@ -28,6 +29,8 @@
   <bean id="ownerPermission" class="com.trc.security.permission.OwnerPermission" />
 
   <bean id="internalUserPermission" class="com.trc.security.permission.InternalUserPermission" />
+  
+   <bean id="refundPermission" class="com.trc.security.permission.RefundPermission" init-method="init" />
 
   <!-- REQUIRES UPGRADING TO SPRING 3.1 -->
   <!-- <bean id="webExpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"> <beans:property name="permissionEvaluator" 
