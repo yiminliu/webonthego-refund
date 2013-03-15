@@ -22,7 +22,7 @@ import com.tscp.mvne.PaymentTransaction;
 import com.tscp.mvne.TSCPMVNA;
 
 @Service
-public class RefundService {
+public class RefundService implements RefundServiceModel {
   private TSCPMVNA port;
   
   @Autowired
